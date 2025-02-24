@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: black;
+}
+
+header {
+    background: black;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar styles */
+nav {
+    display: flex;
+    background-image: url('images/bgbgb.png');
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Change text color on hover */
+nav a:hover {
+    color: red;
+}
+
+/* Underline effect */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Expand the red line when hovered */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Active link styling */
+nav a.active {
+    color: red;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+    background: url('images/bbb.jpg');
+    color: white;
+    padding-top: 100px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.cta {
+    background: red;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Countdown Section */
+.countdown {
+    text-align: center;
+    background: url('images/bggg.jpg')no-repeat center center/cover;
+    color: white;
+    padding: 60px 0;
+    font-size: 24px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.timer div {
+    background: grey;
+    padding: 18px;
+    border-radius: 5px;
+}
+
+/* Program Section */
+.program {
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* Speakers Section */
+.speakers-container {
+    text-align: center;
+    padding: 60px 0;
+    background: #f8f8f8;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.designation {
+    font-size: 16px;
+    font-style: italic;
+    color: gray;
+}
+
+/* Carousel Navigation */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Footer */
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 12px;
+    margin-top: 0px;
+}

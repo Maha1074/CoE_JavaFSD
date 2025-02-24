@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/hijk.jpg') no-repeat center center/cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .carousel-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            min-height: 60vh;
+            position: relative;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 30px;
+        }
+        .speaker {
+            position: relative;
+            text-align: center;
+            width: 220px;
+        }
+        .speaker img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .speaker:hover img {
+            filter: brightness(0.3);
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(212, 32, 32, 0.7);
+            opacity: 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .speaker:hover .overlay {
+            opacity: 1;
+        }
+        .overlay i {
+            font-size: 20px;
+            color: white;
+            transition: 0.3s;
+        }
+        .overlay i:hover {
+            transform: scale(1.2);
+        }
+        .name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .designation {
+            font-size: 14px;
+            font-style: italic;
+            color: gray;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .controls button {
+            background: #ff3c00;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .controls button:hover {
+            background: darkred;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: white;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="active">HOME</a>
+            <a href="speakers.html">SPEAKERS</a>
+            <a href="program.html">PROGRAM</a>
+            <a href="registration.html">REGISTER</a>
+        </nav>
+    </header>
+    <div class="heading">Our Esteemed Speakers</div>
+    <div class="carousel-container">
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <div class="carousel">
+            <div class="speaker">
+                <img src="images/img4.png" alt="Patrick Spencer">
+                <div class="overlay">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="name">Patrick Spencer</div>
+                <div class="designation">S&P Analyzer</div>
+            </div>
+            <div class="speaker">
+                <img src="images/img5.webp" alt="Jane Doe">
+                <div class="overlay">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="name">Jane Doe</div>
+                <div class="designation">Tech Innovator</div>
+            </div>
+            <div class="speaker">
+                <img src="images/img6.webp" alt="John Smith">
+                <div class="overlay">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="name">John Smith</div>
+                <div class="designation">Cybersecurity Expert</div>
+            </div>
+        </div>
+        <button class="next" onclick="nextSlide()">❯</button>
+    </div>
+    <script>
+        let index = 0;
+        function showSlides() {
+            const slides = document.querySelector('.carousel');
+            const slideWidth = document.querySelector('.speaker').offsetWidth + 30;
+            slides.style.transform = `translateX(${-index * slideWidth}px)`;
+        }
+        function nextSlide() {
+            if (index < document.querySelectorAll('.speaker').length - 2) {
+                index++;
+                showSlides();
+            }
+        }
+        function prevSlide() {
+            if (index > 0) {
+                index--;
+                showSlides();
+            }
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2029 Event Program. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

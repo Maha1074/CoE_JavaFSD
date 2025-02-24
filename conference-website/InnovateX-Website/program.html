@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Dev Leadership Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url('images/grid.jpg')no-repeat center center/cover;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #111;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+        nav a:hover {
+            color: #00ff99;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 80px 20px 40px; /* Adjust padding for nav overlap */
+            flex: 1;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .event-list {
+            margin-top: 20px;
+        }
+        .event {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 2px solid #333;
+        }
+        .event span {
+            flex: 1;
+            text-align: left;
+        }
+        .event .stage {
+            color: #00ff99;
+            text-align: right;
+        }
+        .event .buy-now {
+            background-color: white;
+            color: black;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .event .buy-now:hover {
+            background-color: #00ff99;
+            color: black;
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="active">HOME</a>
+            <li class="nav-item"><a class="nav-link text-white active" href="about.html">ABOUT</a></li>
+            <a href="speakers.html">SPEAKERS</a>
+            <a href="program.html">PROGRAM</a>
+            <a href="registration.html">REGISTER</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Upcoming Dev Leadership Events</h1>
+        <div class="event-list">
+            <div class="event">
+                <span><b>May. 30, A State Of Trance</b></span>
+                <span>21:00 - 00:00</span>
+                <a href="registration.html" class="buy-now">BUY NOW</a>
+            </div>
+            <div class="event">
+                <span><b>Feb. 22, The Flying Dutch</b></span>
+                <span>21:00 - 00:00</span>
+                <a href="registration.html" class="buy-now">BUY NOW</a>
+            </div>
+            <div class="event">
+                <span><b>Mar. 20, Electronic Family</b></span>
+                <span>21:00 - 00:00</span>
+                <a href="registration.html" class="buy-now">BUY NOW</a>
+            </div>
+            <div class="event">
+                <span><b>Mar. 29, New Horizons</b></span>
+                <span>21:00 - 00:00</span>
+                <a href="registration.html" class="buy-now">BUY NOW</a>
+            </div>
+            <div class="event">
+                <span><b>Apr. 16, Utopia Island</b></span>
+                <span>00:00 - 03:00</span>
+                <a href="registration.html" class="buy-now">BUY NOW</a>
+            </div>
+            <div class="event">
+                <span><b>Apr. 25, Best Of Armin</b></span>
+                <span>21:00 - 00:00</span>
+                <a href="registration.html" class="buy-now">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2029 The Coder Conference. All Rights Reserved.
+    </footer>
+</body>
+</html>

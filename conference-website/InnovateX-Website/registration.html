@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/bgg.webp') no-repeat center center/cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: white;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: white;
+            font-style: initial;
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            color: white;
+        }
+        input, select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+        }
+        select option {
+            color: black;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        footer {
+            margin-top: auto;
+            padding: 10px;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="active">HOME</a>
+            <li class="nav-item"><a class="nav-link text-white active" href="about.html">ABOUT</a></li>
+            <a href="speakers.html">SPEAKERS</a>
+            <a href="program.html">PROGRAM</a>
+            <a href="registration.html">REGISTER</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="header">EVENT REGISTRATION</div>
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="event">Select Event Day:</label>
+            <select id="event" name="event" required>
+                <option value="">-- Select a Day --</option>
+                <option value="Day 1">Day 1 - 23 May 2029</option>
+                <option value="Day 2">Day 2 - 24 May 2029</option>
+                <option value="Day 3">Day 3 - 25 May 2029</option>
+                <option value="Day 4">Day 4 - 26 May 2029</option>
+                <option value="Day 5">Day 5 - 27 May 2029</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2029 Event Program. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
